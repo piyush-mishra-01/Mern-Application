@@ -11,6 +11,8 @@ const userSchema = mongoose.Schema({
     username: String,
     email: String,
     phone: Number,
+    salary: Number,
+    yoj: Number,
 });
 
 autoIncrement.initialize(mongoose.connection);

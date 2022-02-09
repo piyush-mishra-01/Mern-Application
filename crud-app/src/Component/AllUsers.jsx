@@ -1,5 +1,6 @@
 import react, { useState, useEffect } from "react";
 import axios from "axios";
+import moment from 'moment'
 import {
   Table,
   TableHead,
@@ -130,6 +131,9 @@ const AllUsers = () => {
             <TableCell>Username</TableCell>
             <TableCell>Email</TableCell>
             <TableCell>Phone</TableCell>
+            <TableCell>salary</TableCell>
+            <TableCell>Year of Joining</TableCell>
+            <TableCell>Date of Entry</TableCell>
             <TableCell></TableCell>
           </TableRow>
         </TableHead>
@@ -145,6 +149,9 @@ const AllUsers = () => {
               <TableCell>{user.username}</TableCell>
               <TableCell>{user.email}</TableCell>
               <TableCell>{user.phone}</TableCell>
+              <TableCell>{user.salary}</TableCell>
+              <TableCell>{user.yoj}</TableCell>
+              <TableCell>{moment().format('ll')}</TableCell>
               <TableCell>
                 <Button
                   color="primary"

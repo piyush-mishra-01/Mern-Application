@@ -50,6 +50,9 @@ router.post("/add", upload.single("articleImage"), async (req, res) => {
     username: req.body.username,
     email: req.body.email,
     phone: req.body.phone,
+    salary: req.body.salary,
+    yoj: req.body.yoj,
+
   }).save();
 
   res.status(200).send(response);

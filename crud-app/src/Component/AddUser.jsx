@@ -28,6 +28,8 @@ export default function AddUser() {
   const [username1, setusername] = useState(null);
   const [email1, setemail] = useState(null);
   const [phone1, setphone] = useState(null);
+  const [salary, setsalary] = useState(null);
+  const [yoj, setyoj] = useState(null);
   const [uploadedFile, setUploadedFile] = useState("");
 
   function handleUploadedFile(e) {
@@ -43,6 +45,8 @@ export default function AddUser() {
     formData.append("username", username1);
     formData.append("email", email1);
     formData.append("phone", phone1);
+    formData.append("salary", salary);
+    formData.append("yoj", yoj);
 
     // new line added
     Axios.post("http://localhost:8080/users/add", formData);
@@ -70,6 +74,8 @@ export default function AddUser() {
         <input value={username1} onChange={(e) => setusername(e.target.value)}/>
         <input value={email1} onChange={(e) => setemail(e.target.value)} />
         <input value={phone1} onChange={(e) => setphone(e.target.value)} />
+        <input value={salary} onChange={(e) => setsalary(e.target.value)} />
+        <input value={yoj} onChange={(e) => setyoj(e.target.value)} />
         <button type="submit" onClick={() => {alert("File Uploaded");}}>
           Import userImage
         </button>

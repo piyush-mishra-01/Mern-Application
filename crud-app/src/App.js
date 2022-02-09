@@ -1,6 +1,7 @@
 import AllUsers from './Component/AllUsers';
 import AddUser from './Component/AddUser';
 import EditUser from './Component/EditUser';
+import graph from './Component/graph'
 import NavBar from './Component/NavBar';
 import NotFound from './Component/NotFound'; 
 import CodeForInterview from './Component/CodeForInterview';
@@ -15,6 +16,8 @@ function App() {
         <Route exact path="/all" component={AllUsers} />
         <Route exact path="/add" component={AddUser} />
         <Route exact path="/edit/:id" component={EditUser} />
+        <Route exact path="/data" component={graph} />
+        
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
